@@ -1,0 +1,99 @@
+.hero-section{
+    background-color: rgb(134, 55, 138);
+}
+
+.hero-section2{
+    background-color: rgb(121, 190, 125);
+}
+.hero-section3{
+    background-color: rgb(104, 87, 157);
+}
+.hero-section4{
+    background-color: rgb(238, 234, 153);
+}
+.hero-section5{
+    background-color: rgb(87, 173, 140);
+}
+.hero-section6{
+    background-color: rgb(87, 173, 140)
+}
+.faqs{
+    background-color: rgb(43, 44, 62)
+}
+.apply-now{
+  background-color: rgb(184, 178, 216);
+}
+.shade{
+  inset: 0;
+  z-index: 0;
+  opacity: 1;
+}
+
+.reveal-now{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    background-color: #f0e53f;
+    border-radius: 0 50px 50px 0;
+    padding-inline: 10px;
+    padding-top: 5px;
+}
+.refer-btn{
+    font-family: "TacticSans-bold";
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: #86358a;
+      text-transform: uppercase;
+  }
+  .download-rox{
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #287758;
+    font-family:  "TacticSans-bold";
+  }
+  .discount-stroke{
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #287758;
+    font-family:  "TacticSans-bold";
+  }
+  .num-stroke{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #57ad8b;
+    font-family:  "TacticSans-bold";
+  }
+  .get-now{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #eae282;
+    font-family:  "TacticSans-bold";
+  }
+  .content-container {
+    width: 1668px;
+    margin: 0 auto;
+    height: 100%;
+}
+.green-stroke{
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #287758;
+}
+.box-shadow-green{
+  box-shadow: 0 0 21px 9px #57ad8b;
+}
+.refer-now{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  background-color: #eeea99;
+  border-radius: 0 50px 50px 0;
+  padding-inline: 10px;
+  padding-top: 5px;
+  margin: 0 0 0 0;
+}
+.form input::placeholder {
+  color: white;
+} 

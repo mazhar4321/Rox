@@ -1,0 +1,105 @@
+/* @font-face {
+  font-family: 'TacticSans';
+  src: local('TacticSans'), url(./assets/fonts/TacticSans-Reg.otf) format('opentype');
+}
+@font-face {
+  font-family: 'TacticSans';
+  font-weight: 900;
+  src: local('TacticSans'), url(./assets/fonts/TacticSansExd-BldIt.otf) format('opentype');
+}
+@font-face {
+  font-family: 'TacticSans';
+  font-weight: 400;
+  src: local('TacticSans'), url(./assets/fonts/TacticSansExd-MedIt.otf) format('opentype');
+} */
+@font-face {
+  font-family: "TacticSans-medium";
+  /* font-weight: 400; */
+  src: url("./assets/fonts/TacticSansExd-MedIt.otf") format("truetype");
+}
+/* @font-face {
+  font-family: "TacticSans-bold";
+  font-weight: 900;
+  src: url("./assets/fonts/TacticSansExd-BldIt.otf") format("truetype");
+} */
+@font-face {
+  font-family: "TacticSans-bold";
+  font-weight: 900;
+  src: url("./assets/fonts/TacticSans-Bld.otf") format("truetype");
+}
+@font-face {
+  font-family: "TacticSans";
+  font-weight: 400;
+  src: url("./assets/fonts/TacticSans-Reg.otf") format("truetype");
+}
+@font-face {
+  font-family: "TacticSans-thin";
+  font-weight: 400;
+  src: url("TacticSans-Thn") format("truetype");
+}
+body{
+  font-family: "TacticSans-bold"
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #000000;
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.container{
+  max-width: 98% !important;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  z-index: 999;
+  background: #2b2c3e;
+  border-radius: 8px;
+  position: relative;
+  width: 80vw;
+  border-radius: 15px;
+  border: 3px solid #f0e43f;
+    padding: 30px 30px 30px 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 70vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #555;
+}
+.ol-num {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* .ol-num li::before {
+  content: counter(item) ". ";
+  counter-increment: item;
+} */
+

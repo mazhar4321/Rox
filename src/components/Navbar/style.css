@@ -1,0 +1,40 @@
+.navbar{
+    background: radial-gradient(at 50% bottom, #56ad8b 0%, #6f6b8a, #843a8a);
+    filter: drop-shadow(1px 0px 10px rgba(0, 0, 0, 0.3));
+}
+.navbar h1{
+    line-height: 17px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+.active{
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    transition: 0.3s linear;
+    display: flex;
+    justify-content:stretch;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    z-index: 40;
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .08);
+    /* padding: 0 7%; */
+}
+.hidden{
+    height: 4rem;
+    width: 100%;
+    z-index: 40;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .08);
+    position: fixed;
+    top: -80px;
+    transition: 0.3s linear;
+
+}
+.purple-stroke{
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color:  #111f5b;
+}
