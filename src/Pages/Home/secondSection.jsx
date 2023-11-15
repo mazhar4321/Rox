@@ -7,10 +7,9 @@ import AppStore from '../../assets/app-store.png'
 import SliderGraphic from '../../assets/slide-1-graphic-3.png'
 import SliderGraphic2 from '../../assets/slide-2-graphic-1.png'
 import SliderGraphic3 from '../../assets/slide-2-graphic-3.png'
-import RRR from '../../assets/rrr.png'
-import OOO from '../../assets/ooo.png'
-import XXX from '../../assets/xxx.png'
+
 import YellowGradient from '../../assets/gradiant-yellow.png'
+import BgImageAnimation from '../../components/Animation/BgImageAnimation'
 
 function SecondSection() {
   return (
@@ -18,32 +17,7 @@ function SecondSection() {
     <div className='absolute w-full h-full z-10 shade'>
     <img className='w-full h-full' src={YellowGradient} alt=''/>
     </div>
-    <div className='flex flex-col gap-1 justify-center absolute left-0  z-10 h-full'>
-    <div className='flex'>
-    <img className=' h-[18vh]' src={RRR} alt=''/>
-    <img className=' h-[18vh]' src={RRR} alt=''/>
-    <img className=' h-[18vh]' src={RRR} alt=''/>
-    <img className=' h-[18vh]' src={RRR} alt=''/>
-    <img className=' h-[18vh]' src={RRR} alt=''/>
-    <img className=' h-[18vh]' src={RRR} alt=''/>
-    </div>
-    <div className='flex'>
-    <img className=' h-[18vh]' src={OOO} alt=''/>
-    <img className=' h-[18vh]' src={OOO} alt=''/>
-    <img className=' h-[18vh]' src={OOO} alt=''/>
-    <img className=' h-[18vh]' src={OOO} alt=''/>
-    <img className=' h-[18vh]' src={OOO} alt=''/>
-    <img className=' h-[18vh]' src={OOO} alt=''/>
-    </div>
-    <div className='flex'>
-    <img className=' h-[18vh]' src={XXX} alt=''/>
-    <img className=' h-[18vh]' src={XXX} alt=''/>
-    <img className=' h-[18vh]' src={XXX} alt=''/>
-    <img className=' h-[18vh]' src={XXX} alt=''/>
-    <img className=' h-[18vh]' src={XXX} alt=''/>
-    <img className=' h-[18vh]' src={XXX} alt=''/>
-    </div>
-    </div>
+    <BgImageAnimation/>
     
     <div>
   
