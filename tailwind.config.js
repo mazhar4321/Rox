@@ -14,8 +14,11 @@ export default {
         '2xl': '6rem',
       },
     },
-    
-    extend: {},
+      extend: {
+        // animation: {
+        //   'spin-slow': 'spin 20s linear infinite',
+        // },
+      },
   },
   plugins: [],
 }
