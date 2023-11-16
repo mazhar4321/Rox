@@ -22,7 +22,7 @@ function HeroSection() {
 
   const slideVariants = {
     hidden: { x: -20 },
-    visible: {x: [0, -20, 0, -20, 20, 0] ,  transition: { duration: 10, repeat: Infinity, repeatType: 'yoyo' },},
+    visible: { x: [0, -20, 0, -20, 20, 0], transition: { duration: 10, repeat: Infinity, repeatType: 'yoyo' }, },
   };
 
   const OnlineVariants = {
@@ -53,12 +53,12 @@ function HeroSection() {
         className='absolute bottom-0   z-10 shade'
       >
         <img className='w-full h-full' src={Gradient} alt='' />
-     </div>
-     <img
-  src={Circle}
-  alt=''
-  className='absolute left-1/2 top-52 transform -translate-x-1/2 -translate-y-1/2 z-20 animate-ping	animate-pulse		'
-/>
+      </div>
+      <img
+        src={Circle}
+        alt=''
+        className='absolute left-1/2 top-52 transform -translate-x-1/2 -translate-y-1/2 z-20 animate-ping	animate-pulse		'
+      />
 
       <ImageAnimation />
 
@@ -68,96 +68,96 @@ function HeroSection() {
         animate='visible'
         variants={fadeVariants}
       >
-      <motion.div   variants={staggerVariants}
-      initial='initial'
-      animate='animate' 
-      className='z-20 relative flex flex-col items-center lg:items-start'>
-      <motion.img
-        className='w-fit lg:h-[15vh] h-8'
-        src={Real}
-        alt=''
-        variants={fadeVariants}
-        initial='hidden'
-        animate='visible'
-      />
-      <motion.div
-        className='flex lg:my-10 my-1'
-        variants={staggerVariants}
-        initial='initial'
-        animate='animate'
-      >
-        <motion.img
-          className='w-fit lg:h-[15vh] h-8'
-          src={Online1}
-          alt=''
-          variants={OnlineVariants}
-        />
-        <motion.img
-          className='w-fit lg:h-[15vh] h-8 '
-          src={Online2}
-          alt=''
-          variants={OnlineVariants}
-        />
-        <motion.img
-          className='w-fit lg:h-[15vh] h-8 '
-          src={Online3}
-          alt=''
-          variants={OnlineVariants}
-        />
-        <motion.img
-          className='w-fit lg:h-[15vh] h-8 '
-          src={Online4}
-          alt=''
-          variants={OnlineVariants}
-        />
-        <motion.img
-          className='w-fit lg:h-[15vh] h-8 '
-          src={Online5}
-          alt=''
-          variants={OnlineVariants}
-        />
-        <motion.img
-          className='w-fit lg:h-[15vh] h-8'
-          src={Online6}
-          alt=''
-          variants={OnlineVariants}
-        />
-      </motion.div>
-      <motion.img
-        className='w-fit lg:h-[15vh] h-8 lg:my-2 my-1'
-        src={Experience}
-        alt=''
-        variants={fadeVariants}
-        initial='hidden'
-        animate='visible'
-      />
-      <motion.div
-        className='reveal-now w-fit py-1 my-2 lg:my-5'
-        variants={fadeVariants}
-        initial='hidden'
-        animate='visible'
-      >
-        <motion.h6 className='uppercase text-white lg:text-2xl text-lg refer-btn'>
-          Refer Now
-        </motion.h6>
-        <motion.img
-          className='w-8 lg:w-fit'
-          src={BtnIcon}
-          alt=''
-          variants={imgVariants}
+        <motion.div variants={staggerVariants}
           initial='initial'
           animate='animate'
-        />
-      </motion.div>
-    </motion.div>
+          className='z-20 relative flex flex-col items-center lg:items-start'>
+          <motion.img
+            className='w-fit lg:h-[15vh] h-8'
+            src={Real}
+            alt=''
+            variants={fadeVariants}
+            initial='hidden'
+            animate='visible'
+          />
+          <motion.div
+            className='flex lg:my-10 my-1'
+            variants={staggerVariants}
+            initial='initial'
+            animate='animate'
+          >
+            <motion.img
+              className='w-fit lg:h-[15vh] h-8'
+              src={Online1}
+              alt=''
+              variants={OnlineVariants}
+            />
+            <motion.img
+              className='w-fit lg:h-[15vh] h-8 '
+              src={Online2}
+              alt=''
+              variants={OnlineVariants}
+            />
+            <motion.img
+              className='w-fit lg:h-[15vh] h-8 '
+              src={Online3}
+              alt=''
+              variants={OnlineVariants}
+            />
+            <motion.img
+              className='w-fit lg:h-[15vh] h-8 '
+              src={Online4}
+              alt=''
+              variants={OnlineVariants}
+            />
+            <motion.img
+              className='w-fit lg:h-[15vh] h-8 '
+              src={Online5}
+              alt=''
+              variants={OnlineVariants}
+            />
+            <motion.img
+              className='w-fit lg:h-[15vh] h-8'
+              src={Online6}
+              alt=''
+              variants={OnlineVariants}
+            />
+          </motion.div>
+          <motion.img
+            className='w-fit lg:h-[15vh] h-8 lg:my-2 my-1'
+            src={Experience}
+            alt=''
+            variants={fadeVariants}
+            initial='hidden'
+            animate='visible'
+          />
+          <motion.div
+            className='reveal-now w-fit py-1 my-2 lg:my-5'
+            variants={fadeVariants}
+            initial='hidden'
+            animate='visible'
+          >
+            <motion.h6 className='uppercase text-white lg:text-2xl 2xl:text-5xl text-lg refer-btn'>
+              Refer Now
+            </motion.h6>
+            <motion.img
+              className='w-8 lg:w-fit 2xl:w-16'
+              src={BtnIcon}
+              alt=''
+              variants={imgVariants}
+              initial='initial'
+              animate='animate'
+            />
+          </motion.div>
+        </motion.div>
         <motion.div
-          className='absolute lg:-bottom-10 top-20 lg:right-20 h-5/6 z-10'
+          className='absolute lg:bottom-0   lg:right-20 z-10'
           initial='hidden'
           animate='visible'
           variants={slideVariants}
-          whileHover={{scale: 1.1,cursor:"pointer" ,transition:{delay:0.2, ease: easeIn}}}
+          whileHover={{ scale: 1.1, cursor: "pointer", transition: { delay: 0.2, ease: easeIn } }}
         >
-          <img className='w-fit max-h-full' src={SlideImg} alt='' />
+          <img className='w-fit max-h-full 2xl:h-[90vh] lg:h-[90vh]' src={SlideImg} alt='' />
         </motion.div>
       </motion.div>
     </div>

@@ -42,8 +42,8 @@ function Faqs() {
     <img src={RoundedIcon} className='absolute lg:bottom-0 top-20 right-5 lg:left-1/2 z-20 lg:w-36 w-16' alt='' />
     
     <div className='container mx-auto lg:h-screen h-[55vh] relative'>
-    <div className='z-10 absolute left-20 bottom-0 top-32 '>
-    <img className=' max-h-full ' src={SlideImg} alt='' />
+    <div className='z-10 absolute left-20 bottom-0 left-20 '>
+    <img className=' w-fit max-h-full 2xl:h-[90vh] lg:h-[90vh] ' src={SlideImg} alt='' />
     <img src={Slide2} className='absolute top-10 left-0 rotate-[65deg] z-20 lg:w-36 w-16' alt='' />
     </div>
     <div className='h-full '>

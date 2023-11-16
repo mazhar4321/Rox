@@ -93,32 +93,32 @@ function Plans() {
                 </button>
             </div>
         </div>
-        <div className='absolute top-48 left-32 box-shadow-green  mx-auto my-auto flex justify-center  bg-[#67519d]  2xl:w-fit w-2/3  border border-white py-10  px-20 rounded-md flex-col gap-4 items-center'>
+        <div className='absolute top-48 left-32 box-shadow-green  mx-auto my-auto flex justify-center  bg-[#67519d]  2xl:w-fit w-2/3  border border-white py-10  px-20 2xl:py-20  rounded-md flex-col gap-4 items-center'>
 
-            <h1 className='bg-[#2b2c3e] rounded-lg text-white w-fit px-4 py-2 justify-center num-stroke text-lg'>Rs: 1300</h1>
+            <h1 className='bg-[#2b2c3e] rounded-lg text-white 2xl:mb-10 w-fit px-4 py-2 justify-center num-stroke text-lg 2xl:text-6xl'>Rs: 1300</h1>
             <img className='w-fit lg:h-[12vh] ' src={Turbo1} alt='' />
             <div className='flex'>
                 <div className='px-5'>
-                    <h1 className='lg:text-6xl text-xs num-stroke text-white'>25</h1>
-                    <h6 className='text-sm text-center'>GB Data      </h6>
+                    <h1 className='lg:text-6xl 2xl:text-9xl text-xs num-stroke text-white'>25</h1>
+                    <h6 className='text-sm text-center 2xl:text-2xl'>GB Data      </h6>
                 </div>
                 <div className='w-[1px] h-12 py-4 my-1 bg-white'/>
                 <div  className='px-5'>
-                    <h1 className='text-6xl num-stroke text-white'>2500     </h1>
-                    <h6 className='text-sm text-center' >All Ntwork Mins      </h6>
+                    <h1 className='text-6xl 2xl:text-9xl num-stroke text-white'>2500     </h1>
+                    <h6 className='text-sm text-center 2xl:text-2xl' >All Ntwork Mins      </h6>
                 </div>
                 <div className='w-[1px] h-12 py-4 my-1 bg-white'/>
                 <div  className='px-5'>
-                    <h1 className='text-6xl num-stroke text-white'>2500      </h1>
-                    <h6 className='text-sm text-center'>SMS </h6>
+                    <h1 className='text-6xl 2xl:text-9xl num-stroke text-white'>2500      </h1>
+                    <h6 className='text-sm text-center 2xl:text-2xl'>SMS </h6>
                 </div>
             </div>
             <div>
-                <div className="reveal-now bg-[#2b2c3e] flex items-center ">
-                    <h6 className="uppercase text-white text-2xl get-now">Get Now</h6>
-                    <img src={GetNow} alt="" />
+                <div className="reveal-now bg-[#2b2c3e] flex items-center my-2 lg:my-5 2xl:py-2 ">
+                    <h6 className="uppercase text-white lg:text-2xl 2xl:text-5xl text-lg get-now">Get Now</h6>
+                    <img className='w-8 lg:w-fit 2xl:w-16' src={GetNow} alt="" />
                 </div>
-                <button className='border font-bold border-white p-3 rounded-lg mt-5  items-center flex justify-center mx-auto'> Terms & Conditions
+                <button className='border font-bold border-white p-3 rounded-lg mt-5 2xl:text-2xl 2xl:mb-10 items-center flex justify-center mx-auto'> Terms & Conditions
                 </button>
             </div>
         </div>

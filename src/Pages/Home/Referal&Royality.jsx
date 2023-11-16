@@ -52,16 +52,16 @@ function Referal() {
     </div>
     <div className=' w-full  lg:py-20 py-10 uppercase h-full text-white justify-end flex flex-col lg:gap-5 gap-1 lg:items-end items-center '>
   
-    <h1 className='text-start font-[TacticSans-bold] text-base text-[#87348a] lg:text-4xl z-10'>REFERRALS & LOYALTY   </h1>
+    <h1 className='text-start font-[TacticSans-bold] text-base text-[#87348a] lg:text-2xl 2xl:text-6xl z-10'>REFERRALS & LOYALTY   </h1>
     <div className='flex justify-between lg:items-end items-center z-10 flex-col'>
     <img src={Refer} className='w-fit h-8 lg:h-[18vh]' alt=' ' />
     <img src={Earn} className='w-fit h-8 lg:h-[18vh]' alt=' ' />
     <img src={Thrive} className='w-fit h-8 lg:h-[17vh]' alt=' ' />
     </div>
-    <p className='mt-2 lg:text-right text-[#87348a] z-10 2xl:text-base text-xs text-center'>Refer friends to ROX, score big points for you and your squad!    </p>
-    <div className='bg-[#eeea99] w-fit float-right mt-2 flex items-center gap-5 z-10 refer-now lg:py-1 py-0.5'>
-    <h1 className='download-rox text-lg text-white 2xl:text-xl '>Refer Now</h1>
-    <img src={BtnIcon} alt='' />
+    <p className='mt-2 lg:text-right text-[#87348a] z-10 2xl:text-3xl text-xs text-center lg:text-base'>Refer friends to ROX, score big points for you and your squad!    </p>
+    <div className='bg-[#eeea99] w-fit float-right mt-2 flex items-center gap-5 z-10 refer-now 2xl:py-2 lg:py-1 py-0.5'>
+    <h1 className='download-rox text-lg text-white lg:text-2xl 2xl:text-5xl '>Refer Now</h1>
+    <img  className='w-8 lg:w-fit 2xl:w-16' src={BtnIcon} alt='' />
    
     </div>
     </div>

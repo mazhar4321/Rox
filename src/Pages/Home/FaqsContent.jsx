@@ -25,86 +25,86 @@ function FaqsContent() {
       <img className='w-64 px-4 py-2' src={FaqImg} alt=''/>
       <div className=' py-4 border-t border-b  border-white'>
       <div  onClick={() => handleModalOpen(<AccountSetupContent/>)}  className='flex justify-between items-center text-2xl cursor-pointer font-semibold text-white px-5'>
-      <h1 className='text-lg'>Ready To Rox</h1>
-      <img className='w-8' src={ModalIcon} alt=''/>
+      <h1 className='text-lg 2xl:text-4xl'>Ready To Rox</h1>
+      <img className='w-8 2xl:w-16' src={ModalIcon} alt=''/>
       </div>
       </div>
       <div className=' py-4 border-t border-b  border-white'>
       <div onClick={() => handleModalOpen(<ReadyToRox/>)} className='flex justify-between items-center text-2xl cursor-pointer font-semibold text-white px-5'>
-      <h1 className='text-lg'>Account Setup</h1>
-      <img className='w-8' src={ModalIcon} alt=''/>
+      <h1 className='text-lg 2xl:text-4xl'>Account Setup</h1>
+      <img className='w-8 2xl:w-16' src={ModalIcon} alt=''/>
       </div>
       </div>
       <div className=' py-4 border-t border-b  border-white'>
       <div onClick={() => handleModalOpen(<PlansAndSetup/>)}  className='flex justify-between items-center text-2xl cursor-pointer font-semibold text-white px-5'>
-      <h1 className='text-lg'>Plans and Perks</h1>
-      <img className='w-8' src={ModalIcon} alt=''/>
+      <h1 className='text-lg 2xl:text-4xl'>Plans and Perks</h1>
+      <img className='w-8 2xl:w-16' src={ModalIcon} alt=''/>
       </div>
       </div>
       <div className=' py-4 border-t border-b  border-white'>
       <div onClick={() => handleModalOpen(<ReadyToRox3 title="Sign up 3"/>)}  className='flex justify-between items-center text-2xl cursor-pointer font-semibold text-white px-5'>
-      <h1 className='text-lg'>Ready To Rox 3</h1>
-      <img className='w-8' src={ModalIcon} alt=''/>
+      <h1 className='text-lg 2xl:text-4xl'>Ready To Rox 3</h1>
+      <img className='w-8 2xl:w-16' src={ModalIcon} alt=''/>
       </div>
       </div>
       <div className=' py-4 border-t border-b  border-white'>
       <div onClick={() => handleModalOpen(<ReadyToRox3 title="Sign up 4"/>)}  className='flex justify-between items-center text-2xl cursor-pointer font-semibold text-white px-5'>
-      <h1 className='text-lg'>Ready To Rox 4</h1>
-      <img className='w-8' src={ModalIcon} alt=''/>
+      <h1 className='text-lg 2xl:text-4xl'>Ready To Rox 4</h1>
+      <img className='w-8 2xl:w-16' src={ModalIcon} alt=''/>
       </div>
       </div>
       <div className=' py-4 border-t border-b  border-white'>
       <div onClick={() => handleModalOpen(<ReadyToRox3 title="Sign up 5"/>)}  className='flex justify-between items-center text-2xl cursor-pointer font-semibold text-white px-5'>
-      <h1 className='text-lg'>Ready To Rox 5</h1>
-      <img className='w-8' src={ModalIcon} alt=''/>
+      <h1 className='text-lg 2xl:text-4xl'>Ready To Rox 5</h1>
+      <img className='w-8 2xl:w-16' src={ModalIcon} alt=''/>
       </div>
       </div>
       <div className=' py-4 border-t border-b  border-white'>
       <div onClick={() => handleModalOpen(<ReadyToRox3 title="Sign up 6"/>)}  className='flex justify-between items-center text-2xl cursor-pointer font-semibold text-white px-5'>
-      <h1 className='text-lg'>Ready To Rox 6</h1>
-      <img className='w-8' src={ModalIcon} alt=''/>
+      <h1 className='text-lg 2xl:text-4xl'>Ready To Rox 6</h1>
+      <img className='w-8 2xl:w-16' src={ModalIcon} alt=''/>
       </div>
       </div>
       <div className=' py-4 border-t border-b  border-white'>
       <div onClick={() => handleModalOpen(<ReadyToRox3 title="Sign up 7"/>)}  className='flex justify-between items-center text-2xl cursor-pointer font-semibold text-white px-5'>
-      <h1 className='text-lg'>Ready To Rox 7</h1>
-      <img className='w-8' src={ModalIcon} alt=''/>
+      <h1 className='text-lg 2xl:text-4xl'>Ready To Rox 7</h1>
+      <img className='w-8 2xl:w-16' src={ModalIcon} alt=''/>
       </div>
       </div>
       <div className=' py-4 border-t border-b  border-white'>
       <div onClick={() => handleModalOpen(<ReadyToRox3 title="Sign up 8"/>)}  className='flex justify-between items-center text-2xl cursor-pointer font-semibold text-white px-5'>
-      <h1 className='text-lg'>Ready To Rox 8</h1>
-      <img className='w-8' src={ModalIcon} alt=''/>
+      <h1 className='text-lg 2xl:text-4xl'>Ready To Rox 8</h1>
+      <img className='w-8 2xl:w-16' src={ModalIcon} alt=''/>
       </div>
       </div>
       <div className=' py-4 border-t border-b  border-white'>
       <div onClick={() => handleModalOpen(<ReadyToRox3 title="Sign up 9"/>)}  className='flex justify-between items-center text-2xl cursor-pointer font-semibold text-white px-5'>
-      <h1 className='text-lg'>Ready To Rox 9</h1>
-      <img className='w-8' src={ModalIcon} alt=''/>
+      <h1 className='text-lg 2xl:text-4xl'>Ready To Rox 9</h1>
+      <img className='w-8 2xl:w-16' src={ModalIcon} alt=''/>
       </div>
       </div>
       <div className=' py-4 border-t border-b  border-white'>
       <div onClick={() => handleModalOpen(<ReadyToRox3 title="Sign up 10"/>)}  className='flex justify-between items-center text-2xl cursor-pointer font-semibold text-white px-5'>
-      <h1 className='text-lg'>Ready To Rox 10</h1>
-      <img className='w-8' src={ModalIcon} alt=''/>
+      <h1 className='text-lg 2xl:text-4xl'>Ready To Rox 10</h1>
+      <img className='w-8 2xl:w-16' src={ModalIcon} alt=''/>
       </div>
       </div>
       <div className=' py-4 border-t border-b  border-white'>
       <div onClick={() => handleModalOpen(<ReadyToRox3 title="Sign up 11"/>)}  className='flex justify-between items-center text-2xl cursor-pointer font-semibold text-white px-5'>
-      <h1 className='text-lg'>Ready To Rox 11</h1>
-      <img className='w-8' src={ModalIcon} alt=''/>
+      <h1 className='text-lg 2xl:text-4xl'>Ready To Rox 11</h1>
+      <img className='w-8 2xl:w-16' src={ModalIcon} alt=''/>
       </div>
       </div>
       <div className=' py-4 border-t border-b  border-white'>
       <div onClick={() => handleModalOpen(<ReadyToRox3 title="Sign up 12"/>)}  className='flex justify-between items-center text-2xl cursor-pointer font-semibold text-white px-5'>
-      <h1 className='text-lg'>Ready To Rox 12</h1>
-      <img className='w-8' src={ModalIcon} alt=''/>
+      <h1 className='text-lg 2xl:text-4xl'>Ready To Rox 12</h1>
+      <img className='w-8 2xl:w-16' src={ModalIcon} alt=''/>
       </div>
       </div>
       <div className=' py-4 border-t border-b  border-white'>
       <div onClick={() => handleModalOpen(<ReadyToRox3 title="Sign up 13"/>)}  className='flex justify-between items-center text-2xl cursor-pointer font-semibold text-white px-5'>
-      <h1 className='text-lg'>Ready To Rox 13</h1>
-      <img className='w-8' src={ModalIcon} alt=''/>
+      <h1 className='text-lg 2xl:text-4xl'>Ready To Rox 13</h1>
+      <img className='w-8 2xl:w-16' src={ModalIcon} alt=''/>
       </div>
 
       <Modal
