@@ -13,7 +13,7 @@ const variants = {
     },
   },
   closed: {
-    clipPath: "circle(30px at 50px 50px)",
+    clipPath: "circle(0px at 20px 20px)",
     transition: {
       delay: 0.5,
       type: "spring",
@@ -22,13 +22,22 @@ const variants = {
     },
   },
 };
+
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
 
+  const scrollToId = (content) => {
+    const modifiedId = `${content.replace(/\s/g, '').trim()}`;
+    console.log(modifiedId);
+    // Add your scrollIntoView logic here
+    document.getElementById(modifiedId).scrollIntoView({ behavior: "smooth" });
+    setOpen(false)
+  };
+
   return (
-    <motion.div className="sidebar flex justify-center  bg-white items-center lg:hidden" animate={open ? "open" : "closed"}>
+    <motion.div className="sidebar flex justify-center bg-white items-center lg:hidden" animate={open ? "open" : "closed"}>
       <motion.div className="bg" variants={variants}>
-        <Links />
+        <Links scrollToId={scrollToId} />
       </motion.div>
       <ToggleButton setOpen={setOpen} />
     </motion.div>

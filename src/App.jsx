@@ -1,42 +1,44 @@
 
-import { useRef, useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import './App.css'
 import Home from './Pages/Home'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 
 function App() {
-  const containerRef = useRef(null);
-  const [isScrolling, setIsScrolling] = useState(false);
-  const [startY, setStartY] = useState(0);
   const [scrollY, setScrollY] = useState(0);
+  const controls = useAnimation();
 
-  const handleWheel = (e) => {
-    if (!isScrolling) {
-      setIsScrolling(true);
-      setStartY(e.clientY);
-      animateScroll();
-    }
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
   };
 
-  const animateScroll = () => {
-    const container = containerRef.current;
-    const delta = scrollY - startY;
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
-    // Apply momentum effect
-    setScrollY(scrollY + delta * 0.9);
+  useEffect(() => {
+    controls.start({ opacity: scrollY / 1000 }); // Adjust this value based on when you want the animation to start
+  }, [scrollY, controls]);
 
-    if (Math.abs(delta) > 0.9) {
-      requestAnimationFrame(animateScroll);
-    } else {
-      setIsScrolling(false);
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const scrollToElement = () => {
+    const element = document.getElementById('targetElement'); // Replace 'targetElement' with your target element's ID
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
     <div
-      ref={containerRef}
-      onWheel={handleWheel}
       style={{
         width: '100%',
         overflowY: 'auto',

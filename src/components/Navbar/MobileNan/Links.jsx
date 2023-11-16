@@ -13,6 +13,7 @@ const variants = {
     },
   },
 };
+
 const itemVariants = {
   open: {
     y: 0,
@@ -24,18 +25,24 @@ const itemVariants = {
   },
 };
 
-const Links = () => {
-  const items = ["Homepage", "Services", "Portfolio", "Contact", "About"];
+const Links = ({ scrollToId }) => {
+  const items = ["Why Rox", "VOUCHER AND DISCOUNTS", "REFERAL AND ROYALITY", "OUR DATA PLANS", "Faqs"];
+
+  const handleClickNav = (content) => {
+    const modifiedId = `${content.replace(/\s/g, '').trim()}`;
+    scrollToId(modifiedId);
+  };
 
   return (
     <motion.div className="links" variants={variants}>
       {items.map((item) => (
         <motion.a
-          href={`#${item}`}
+          // href={`#${item.replace(/\s/g, '').trim()}`}
           key={item}
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
+          onClick={() => handleClickNav(item)}
         >
           {item}
         </motion.a>
@@ -44,4 +51,4 @@ const Links = () => {
   );
 };
 
-export default Links
+export default Links;

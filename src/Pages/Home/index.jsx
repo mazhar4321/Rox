@@ -10,31 +10,32 @@ import Faqs from './Faqs'
 import Bg from '../../assets/bg-green.jpg'
 import FaqsContent from './FaqsContent'
 import ApplyNow from './ApplyNow'
+import { AnimatePresence } from 'framer-motion'
 
 function Home() {
   return (
-    <div>
-    <div className='hero-section h-screen' >
+    <div >
+    <div id='Hero' className='hero-section h-screen' >
     <div className='mx-auto  overflow-hidden'>
     <HeroSection/>
     </div>
     </div>
-    <div className='hero-section2 h-screen'>
+    <div id='WhyRox' className='hero-section2 h-screen'>
     <div className='  mx-auto h-screen overflow-hidden'>
     <SecondSection/>
     </div>
     </div>
-    <div className='hero-section3 h-screen'>
+    <div id='VOUCHERANDDISCOUNTS' className='hero-section3 h-screen'>
     <div className=' mx-auto h-screen overflow-hidden'>
     <Vouchers/>
     </div>
     </div>
-    <div className='hero-section4 h-screen'>
+    <div id='REFERALANDROYALITY' className='hero-section4 h-screen'>
     <div className=' mx-auto h-screen overflow-hidden'>
     <Referal/>
     </div>
     </div>
-    <div className='hero-section5 h-screen'>
+    <div id='OURDATAPLANS' className='hero-section5 h-screen'>
     <div className='mx-auto h-screen overflow-hidden'>
     <DataPlans/>
     </div>
@@ -45,7 +46,7 @@ function Home() {
     <Plans/>
     </div>
     </div>
-    <div className='faqs lg:h-screen h-fit'>
+    <div id='Faqs' className='faqs lg:h-screen h-fit'>
     <div className='mx-auto lg:h-screen h-fit overflow-hidden'>  
     <Faqs/>
     </div>
@@ -55,7 +56,7 @@ function Home() {
     <FaqsContent/>
     </div>
     </div>
-    <div className='apply-now h-screen'>
+    <div id='applynow' className='apply-now h-screen'>
     <div className=' mx-auto h-screen py-10 overflow-hidden'>
     <ApplyNow/>
     </div>
