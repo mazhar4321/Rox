@@ -6,6 +6,8 @@ import './App.css'
 import Home from './Pages/Home'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import SmoothScroll from './SmoothScroll.jsx';
+import Plans from './Pages/Home/Plans.jsx';
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
@@ -39,16 +41,16 @@ function App() {
 
   return (
     <div
-      style={{
-        width: '100%',
-        overflowY: 'auto',
-        border: '1px solid #ccc',
-      }}
-    >
-   <Navbar/>
-   <Home/>
-   <Footer/>
-   </div>
+    // style={{
+    //   width: '100%',
+    //   overflowY: 'auto',
+    //   border: '1px solid #ccc',
+    // }}
+  >
+ <Navbar/>
+ <Home/>
+ <Footer/>
+ </div>
   )
 }
 

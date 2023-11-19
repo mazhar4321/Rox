@@ -40,9 +40,9 @@ function Home() {
     <DataPlans/>
     </div>
     </div>
-    <div className='hero-section6 h-screen relative overflow-hidden'>
+    <div className='hero-section6 '>
     <img className='absolute left-0 right-0 top-0 bottom-0 w-full'  src={Bg} alt='' />
-    <div className='container mx-auto flex h-screen '>
+    <div className=' '>
     <Plans/>
     </div>
     </div>
