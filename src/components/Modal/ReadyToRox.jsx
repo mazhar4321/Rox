@@ -1,8 +1,8 @@
 function ReadyToRox() {
     return (
         <div className="text-white">
-            <h2 className="text-3xl font-bold my-1">HOW DO I CREATE MY ROX ACCOUNT?      </h2>
-            <ol className="ol-num p-4">
+            <h2 className="lg:text-3xl text-base font-bold my-1">HOW DO I CREATE MY ROX ACCOUNT?      </h2>
+            <ol className="ol-num lg:p-4 p-2">
                 <li className="text-xs py-2 ">1. Download the ROX app
                 </li>
                 <li className="text-xs py-2 ">2. Pop it open and hit ‘Sign Up’ to create an account. Enter your details
@@ -27,7 +27,7 @@ function ReadyToRox() {
                 </li>
                 
             </ol>
-            <h2 className="text-3xl font-bold my-2">WHAT INFO DO I NEED TO GIVE TO SET UP MY ROX PROFILE?            </h2>
+            <h2 className="lg:text-3xl text-base font-bold my-2">WHAT INFO DO I NEED TO GIVE TO SET UP MY ROX PROFILE?            </h2>
            
             <p className="text-xs py-2">We’ll just need the basics: name, birthdate, CNIC, address, and your number.
             </p>

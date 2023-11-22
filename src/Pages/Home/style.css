@@ -40,7 +40,8 @@
     background-color: #f0e53f;
     border-radius: 0 50px 50px 0;
     padding-inline: 10px;
-    padding-top: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 .refer-btn{
     font-family: "TacticSans-bold";
@@ -97,3 +98,51 @@
 .form input::placeholder {
   color: white;
 } 
+
+.linear-purple{
+ background-image:  linear-gradient(to right, #b974bc, #b974bc) 
+}
+.slide-active{
+  background-image: linear-gradient(to right, #6fb67e, #d6dc4c) ;
+}
+
+.cardContainer{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+}
+.cardContainer .card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -25%;
+  height: fit-content;
+  width: 700px;
+  border-radius: 10px;
+  padding: 50px;
+  transform-origin: top;
+}
+
+
+.cardContainer .card .body .imageContainer img {
+  object-fit: cover;
+}
+.main{
+  position: relative;
+  /* margin-top: 50vh; */
+}
+
+@media screen and (max-width: 1040px) {
+  .cardContainer .card  {
+    padding:  10px;
+    height: fit-content;
+    width: fit-content;
+  }
+  .cardContainer{
+    justify-content: start  ;
+  }
+  
+}

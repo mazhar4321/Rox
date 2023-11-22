@@ -112,3 +112,11 @@ body{
   width: 50%;
   font-weight: bold;
 }
+.faqs-content::-webkit-scrollbar{
+  width: 5px;
+  background-color: #87358a;
+  display: block;
+}
+.react-multi-carousel-list{
+  overflow: visible !important;
+}

@@ -4,6 +4,8 @@ import './App.css'
 import Home from './Pages/Home'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 function App() {
   const containerRef = useRef(null);
@@ -35,13 +37,13 @@ function App() {
 
   return (
     <div
-      ref={containerRef}
-      onWheel={handleWheel}
-      style={{
-        width: '100%',
-        overflowY: 'auto',
-        border: '1px solid #ccc',
-      }}
+      // ref={containerRef}
+      // onWheel={handleWheel}
+      // style={{
+      //   width: '100%',
+      //   overflowY: 'auto',
+      //   border: '1px solid #ccc',
+      // }}
     >
    <Navbar/>
    <Home/>

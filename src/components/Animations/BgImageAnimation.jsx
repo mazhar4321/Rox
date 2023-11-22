@@ -32,12 +32,12 @@ const BgImageAnimation = () => {
     };
   
     return (
-      <div className='flex flex-col gap-1 justify-center absolute left-0 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10'>
+      <div className='flex flex-col gap-1 justify-center absolute left-0 top-56 left-1/2 lg:top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10'>
         <div className='flex space-x-1 whitespace-nowrap'>
           {[...Array(10)].map((_, index) => (
             <motion.img
               key={index}
-              className='h-[18vh] '
+              className='lg:h-[16vh] h-12'
               src={RRR}
               alt=''
               variants={sliderVariants}
@@ -50,7 +50,7 @@ const BgImageAnimation = () => {
           {[...Array(10)].map((_, index) => (
             <motion.img
               key={index}
-              className='h-[18vh]	'
+              className='lg:h-[16vh] h-12	'
               src={OOO}
               alt=''
               variants={sliderVariants}
@@ -63,7 +63,7 @@ const BgImageAnimation = () => {
           {[...Array(10)].map((_, index) => (
             <motion.img
               key={index}
-              className='h-[18vh] whitespace-nowrap	'
+              className='lg:h-[16vh] h-12 whitespace-nowrap	'
               src={XXX}
               alt=''
               variants={sliderVariants}
