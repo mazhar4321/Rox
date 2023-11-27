@@ -8,7 +8,7 @@ function Modal({ isOpen, onClose, content }) {
 
   return (
     <div className="modal-overlay">
-      <div className="modal-content px-5 ">
+      <div className="modal-content px-5 faqs-content">
         <span className="close-button " onClick={onClose}>
           <img className='w-8 lg:w-fit' src={CrossBtn} alt='' />
         </span>

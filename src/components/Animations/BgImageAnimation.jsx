@@ -13,36 +13,36 @@ const BgImageAnimation = () => {
       initial: {
         x: 0,
       },
-      animate: {
-        x: "-220%",
+      animatexxx: {
+        x: "-100%",
         transition: {
           repeat: Infinity,
           repeatType:"mirror",
-          duration: 20,
+          duration: 16,
         },
       },
-      animate: {
-        x: "-220%",
+      animateooo: {
+        x: "100%",
         transition: {
           repeat: Infinity,
           repeatType:"mirror",
-          duration: 20,
+          duration: 16,
         },
       },
     };
   
     return (
-      <div className='flex flex-col gap-1 justify-center absolute left-0 top-56 left-1/2 lg:top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10'>
-        <div className='flex space-x-1 whitespace-nowrap'>
+      <div className='flex flex-col gap-1 justify-center absolute left-0 top-[30vh]  lg:top-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:z-10'>
+        <div className='flex space-x-1 whitespace-nowrap  w-full'>
           {[...Array(10)].map((_, index) => (
             <motion.img
               key={index}
-              className='lg:h-[16vh] h-12'
+              className='lg:h-[16vh] h-[12vh]'
               src={RRR}
               alt=''
               variants={sliderVariants}
               initial='initial'
-              animate='animate'
+              animate='animatexxx'
             />
           ))}
         </div>
@@ -50,12 +50,12 @@ const BgImageAnimation = () => {
           {[...Array(10)].map((_, index) => (
             <motion.img
               key={index}
-              className='lg:h-[16vh] h-12	'
+              className='lg:h-[16vh] h-[12vh]	'
               src={OOO}
               alt=''
               variants={sliderVariants}
               initial='initial'
-              animate='animate'
+              animate='animateooo'
             />
           ))}
         </div>
@@ -63,12 +63,12 @@ const BgImageAnimation = () => {
           {[...Array(10)].map((_, index) => (
             <motion.img
               key={index}
-              className='lg:h-[16vh] h-12 whitespace-nowrap	'
+              className='lg:h-[16vh] h-[12vh] whitespace-nowrap	'
               src={XXX}
               alt=''
               variants={sliderVariants}
               initial='initial'
-              animate='animate'
+              animate='animatexxx'
             />
           ))}
         </div>

@@ -91,7 +91,7 @@ const Navbar = () => {
 
     return (
       <ul key={content}>
-        <li className='purple-stroke border-r border-white px-4' onClick={handleClickNav}>
+        <li className='purple-stroke border-r border-white px-[1vw] text-[1vw]' onClick={handleClickNav}>
           {content}
         </li>
       </ul>
@@ -110,13 +110,13 @@ const Navbar = () => {
 >
       <div className='container mx-auto py-4 flex justify-between items-center lg:flex'>
         <div className='cursor-pointer' onClick={()=> document.getElementById('Hero').scrollIntoView({ behavior: 'smooth' })}>
-          <img className='w-24' src={Logo} alt='' />
+          <img className='w-[6vw]' src={Logo} alt='' />
         </div>
         <div className='flex uppercase text-white cursor-pointer font-[TacticSans-bold]'>
           {items.map((nav) => renderNavLink(nav))}
         </div>
         <div className='cursor-pointer' onClick={()=> document.getElementById('ApplyNow').scrollIntoView({ behavior: 'smooth' })}>
-          <img className='w-40' src={ApplyNowButton} alt='' />
+          <img className='w-[10vw]' src={ApplyNowButton} alt='' />
         </div>
       </div>
     </motion.div>

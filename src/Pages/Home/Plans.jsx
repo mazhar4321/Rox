@@ -191,16 +191,7 @@ const Plans = () => {
 
   return (
     <main ref={container} className='main'>
-    <div className='lg:w-full cardContainer  lg:hidden w-full z-20  flex flex-col  gap-1 h-[100vh] py-5 lg:h-full'>
-      <h1 className='lg:text-2xl 2xl:text-3xl text-lg uppercase text-white text-center mb-2 lg:mb-0'>  Our Data Plans</h1>
-      <img className=' h-8 lg:h-[15vh]' src={Wegot} alt='' />
-      <img className=" h-8 lg:h-[15vh]" src={PlansImg}  alt='' />
-      <div className='text-black text-xs lg:text-base 2xl:text-xl text-center '>
-      <p>No more buffering, lagging or <br className='block lg:hidden'/> ‘oye awaaz aa rahi hai?’      </p>
-      <p>Our plans will keep you vibing <br className='block lg:hidden'/> all day, every day.      </p>
-      </div>
-     
-      </div>
+    
       {projects.map((project, i) => {
         const targetScale = 1 - (projects.length - i) * 0.01;
         return (
@@ -236,20 +227,24 @@ const Card = ({ i, GBData, src,allnetworksmins,sms ,price, color, progress, rang
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1])
   const scale = useTransform(progress, range, [1, targetScale]);
-  
+  const isMobile = window.innerWidth < 700;
   return (
+    
     <div ref={containerss} className="cardContainer">
       <motion.div
         style={{
           backgroundColor: color, scale,
-          top: `calc(${i * 35}px)`,
-          left: `calc( 5vh + ${i * 20}px)`
+          top: `calc(${isMobile ? '-15vh' : '-5vh'} + ${i * 35}px)`,
+          left: `calc(${isMobile ? i * 20 : i * 40}px)`,
+          // textShadow: `2px 2px ${color}`, WebkitTextStroke: '0.3px white'
+          boxShadow: `0 0 21px 9px ${color}`
         }
         }
         className="card box-shadow-green ml-0 2xl:w-fit w-2/3 border border border-white py-10 px-20 rounded-md flex-col gap-4 items-center"
       >
       <div className='hidden md:flex items-center flex-col gap-4 justify-center'>
-        <h1 className='bg-[#2b2c3e] rounded-lg text-white w-fit px-4 py-2 justify-center num-stroke text-lg'>Rs: {price}</h1>
+        <h1
+         className='bg-[#2b2c3e] rounded-lg text-white w-fit px-4 py-2 justify-center num-stroke text-lg'>Rs: {price}</h1>
         <img className=' h-[12vh]' src={src} alt='' />
         <div className='flex'>
           <div className='px-5'>
@@ -277,7 +272,7 @@ const Card = ({ i, GBData, src,allnetworksmins,sms ,price, color, progress, rang
         </div>
         </div>
         <div className='block md:hidden'>
-        <PlansCard onModalOpen={onModalOpen}/>
+        <PlansCard GBData={GBData} src={src} allnetworksmins ={allnetworksmins} sms={sms} price={price} color={color} onModalOpen={onModalOpen}/>
         </div>
       </motion.div>
 

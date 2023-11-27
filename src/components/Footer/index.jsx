@@ -8,6 +8,9 @@ import SocialBar from '../../assets/social-bdr.png'
 import JazzLogo from '../../assets/jazz-logo.png'
 import Modal from '../Modal'
 import TermsConditionApplyNow from '../Modal/TermsConditionApplyNow'
+import TextAnimate from '../Animations/TextAnimate'
+import { motion } from 'framer-motion'
+import WaveTextAnimation from '../Animations/TextAnimate'
 
 function Footer() {
   const [isModalOpen, setModalOpen] = useState(false);
