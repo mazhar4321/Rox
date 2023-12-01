@@ -1,6 +1,6 @@
 function AccountSetupContent() {
     return (
-        <div className="text-white faqs-content">
+        <div className="text-white faqs-content px-5 py-4">
             <h2 className="lg:text-3xl text-base font-bold my-2">ARE YOU A NEW JOINER  </h2>
             <ol className="ol-num lg:p-4 p-2">
                 <li className="lg:text-2xl text-base">1. Sign up

@@ -12,7 +12,7 @@
 //           setShow(false)
 //         }
 //     }
-  
+
 //     useEffect(() => {
 //         window.addEventListener('scroll', controlNavbar)
 //         return () => {
@@ -20,7 +20,7 @@
 //         }
 //     }, [])
 //   return (
-    
+
 //     <div
 
 //       className={`active ${show && 'hidden'} navbar fixed top-0 right-0 left-0 w-full hidden'`}>
@@ -70,13 +70,12 @@ const Navbar = () => {
   //   };
   // }, []);
 
-  const {scrollY} = useScroll()
+  const { scrollY } = useScroll()
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const previoys = scrollY.getPrevious()
-    console.log(previoys)
-    if(latest > previoys && latest > 150){
+      const previoys = scrollY.getPrevious()
+    if (latest > previoys && latest > 10) {
       setHidden(true)
-    }else{
+    } else {
       setHidden(false)
     }
   })
@@ -100,42 +99,42 @@ const Navbar = () => {
 
   return (
     <div>
-    <motion.div
-  variants={{
-    visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut', stiffness: 100 } },
-    hidden: { y: '-100%', opacity: 0, transition: { duration: 0.5, ease: 'easeIn', stiffness: 100 } },
-  }}
-  animate={hidden ? 'hidden' : 'visible'}
-  className='navbar fixed top-0 right-0 left-0 w-full h-12 lg:h-fit z-30 hidden lg:block z-50'
->
-      <div className='container mx-auto py-4 flex justify-between items-center lg:flex'>
-        <div className='cursor-pointer' onClick={()=> document.getElementById('Hero').scrollIntoView({ behavior: 'smooth' })}>
-          <img className='w-[6vw]' src={Logo} alt='' />
+      <motion.div
+        variants={{
+          visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut', stiffness: 100 } },
+          hidden: { y: '-100%', opacity: 0, transition: { duration: 0.5, ease: 'easeIn', stiffness: 100 } },
+        }}
+        animate={hidden ? 'hidden' : 'visible'}
+        className='navbar fixed top-0 right-0 left-0 w-full h-12 lg:h-fit z-30 hidden lg:block z-50'
+      >
+        <div className='container mx-auto py-4 flex justify-between items-center lg:flex'>
+          <div className='cursor-pointer' onClick={() => document.getElementById('Hero').scrollIntoView({ behavior: 'smooth' })}>
+            <img className='w-[6vw]' src={Logo} alt='' />
+          </div>
+          <div className='flex uppercase text-white cursor-pointer font-[TacticSans-bold]'>
+            {items.map((nav) => renderNavLink(nav))}
+          </div>
+          <div className='cursor-pointer' onClick={() => document.getElementById('ApplyNow').scrollIntoView({ behavior: 'smooth' })}>
+            <img className='w-[10vw]' src={ApplyNowButton} alt='' />
+          </div>
         </div>
-        <div className='flex uppercase text-white cursor-pointer font-[TacticSans-bold]'>
-          {items.map((nav) => renderNavLink(nav))}
+      </motion.div>
+      <motion.div
+        variants={{
+          visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut', stiffness: 100 } },
+          hidden: { y: '-100%', opacity: 0, transition: { duration: 0.5, ease: 'easeIn', stiffness: 100 } },
+        }}
+        animate={hidden ? 'hidden' : 'visible'}
+        className='navbar fixed top-0 right-0 left-0 w-full h-12 lg:h-fit z-50'>
+        <div className='flex justify-between relative  px-5 py-2.5 lg:hidden'>
+          <Sidebar />
+          <div className='cursor-pointer' onClick={() => document.getElementById('Hero').scrollIntoView({ behavior: 'smooth' })}>
+            <img className='w-20' src={Logo} alt='' />
+          </div>
+          <div className=''>
+            <img className='w-fit' src={Arrow} alt='' />
+          </div>
         </div>
-        <div className='cursor-pointer' onClick={()=> document.getElementById('ApplyNow').scrollIntoView({ behavior: 'smooth' })}>
-          <img className='w-[10vw]' src={ApplyNowButton} alt='' />
-        </div>
-      </div>
-    </motion.div>
-    <motion.div
-    variants={{
-      visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut', stiffness: 100 } },
-      hidden: { y: '-100%', opacity: 0, transition: { duration: 0.5, ease: 'easeIn', stiffness: 100 } },
-    }}
-    animate={hidden ? 'hidden' : 'visible'}
-    className='navbar fixed top-0 right-0 left-0 w-full h-12 lg:h-fit z-50'>
-    <div className='flex justify-between relative  px-5 py-2.5 lg:hidden'>
-        <Sidebar />
-        <div className='cursor-pointer' onClick={()=> document.getElementById('Hero').scrollIntoView({ behavior: 'smooth' })}>
-          <img className='w-20' src={Logo} alt='' />
-        </div>
-        <div className=''>
-          <img className='w-fit' src={Arrow} alt='' />
-        </div>
-      </div>
       </motion.div>
     </div>
   );

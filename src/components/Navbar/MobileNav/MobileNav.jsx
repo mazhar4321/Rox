@@ -27,9 +27,7 @@ const Sidebar = () => {
   const [open, setOpen] = useState(false);
 
   const scrollToId = (content) => {
-    console.log(content)
     const modifiedId = `${content.replace(/\s/g, '').trim()}`;
-    console.log(modifiedId);
     // Add your scrollIntoView logic here
     document.getElementById(modifiedId).scrollIntoView({ behavior: "smooth" });
     setOpen(false)

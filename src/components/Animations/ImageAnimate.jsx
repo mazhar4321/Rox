@@ -11,7 +11,7 @@ function ImageAnimate({children}) {
 
   const bottom = useTransform(scrollYProgress , [0 , 1] ,[0.5,  1])
   return (
-    <motion.div ref={imgRef} style={{ scale: bottom,  }}>
+    <motion.div ref={imgRef} >
       {children}
     </motion.div>
   )

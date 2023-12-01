@@ -1,6 +1,6 @@
 function PlansAndSetup() {
     return (
-        <div className="text-white py-2">
+        <div className="text-white py-4 px-5">
             <h2 className="lg:text-3xl text-base font-extrabold my-1">WHAT PLANS AND PERKS CAN I GET ON ROX?            </h2>
             <p className="text-xs py-2">We’ll just need the basics: name, birthdate, CNIC, address, and your number.
             </p>

@@ -2,7 +2,7 @@ import React from 'react'
 
 function TermsConditionApplyNow() {
     return (
-        <div className="text-white py-2">
+        <div className="text-white py-4 px-5">
             <h2 className="lg:text-3xl text-base font-extrabold my-1">Terms & Conditions </h2>
 
             <ul className="px-4">

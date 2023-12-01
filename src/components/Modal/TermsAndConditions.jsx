@@ -1,8 +1,8 @@
 import React from 'react'
 
-function TermsAndConditions() {
+function TermsAndConditions({color}) {
   return (
-    <div className="text-white py-2">
+    <div style={{background: color}} className="text-black py-4 px-5">
             <h2 className="lg:text-3xl text-base font-extrabold my-1">Terms & Conditions </h2>
             <p className="text-xs py-2">Customers will be subscribed to the turbo via the app, for exact validity days (including subscription day), the offer will expire at midnight of the last validity day.
              <br/>

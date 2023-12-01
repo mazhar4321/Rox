@@ -32,7 +32,7 @@ const BgImageAnimation = () => {
     };
   
     return (
-      <div className='flex flex-col gap-1 justify-center absolute left-0 top-[30vh]  lg:top-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:z-10'>
+      <div className='flex flex-col gap-1 justify-center absolute left-0 top-[30vh]  lg:top-1/2 transform -translate-x-1/2 -translate-y-1/2 '>
         <div className='flex space-x-1 whitespace-nowrap  w-full'>
           {[...Array(10)].map((_, index) => (
             <motion.img

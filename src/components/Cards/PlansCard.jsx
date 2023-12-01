@@ -15,7 +15,6 @@ import PlansImg from '../../assets/plans.webp'
 import TermsAndConditions from '../Modal/TermsAndConditions'
 
 function PlansCard({ onModalOpen, GBData, src,allnetworksmins,sms ,price, color,i}) {
-  console.log(color)
   const getWidth = () => {
     const screenWidth = window.innerWidth;
     // Set the width to half of the screen width

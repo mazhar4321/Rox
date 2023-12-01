@@ -1,6 +1,6 @@
 function ReadyToRox3({title}) {
     return (
-        <div className="text-white">
+        <div className="text-white px-4 py-4">
             <h2 className="lg:text-3xl text-base font-extrabold my-1">{title}            </h2>
             <p className="text-xs lg:py-2">Head over to our website or download our app from your device's Play Store/App Store. Click ‘Sign Up’ to get the party started.
             </p>

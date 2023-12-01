@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+    scroll-behavior: initial !important;
+}
+html , body{
+    height:  auto;
+    min-height: 100%;
+}

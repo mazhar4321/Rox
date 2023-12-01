@@ -143,24 +143,28 @@
 
 
 import React, { useRef, useState } from 'react';
-import { useTransform, motion, useScroll } from 'framer-motion';
+import { useTransform, motion, useScroll, useViewportScroll } from 'framer-motion';
 import { useEffect } from 'react';
 import Lenis from '@studio-freight/lenis'
 import { projects } from '../../data';
 import Turbo1 from '../../assets/turbo1-title.png'
 import GetNow from '../../assets/get-now-yellow-icon.png'
+import GetNowGreen from '../../assets/get-now-green-icon.png'
+import GetNowpurple from '../../assets/get-now-purple-icon.png'
+import GetNowIndigo from '../../assets/get-now-indigo-icon.png'
 import PlansCard from '../../components/Cards/PlansCard'
 import Wegot from '../../assets/we-got.webp'
 import PlansImg from '../../assets/plans.webp'
 import TermsAndConditions from '../../components/Modal/TermsAndConditions';
 import Modal from '../../components/Modal';
+import DataPlans from './DataPlans';
 // import { projects } from '../../data.js'
 
 const Plans = () => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ['start end', 'start start']
+    offset: ['start end', 'end end']
   });
 
   const [isModalOpen, setModalOpen] = useState(false);
@@ -178,26 +182,24 @@ const Plans = () => {
     document.body.style.overflow = 'auto';
   };
 
-  useEffect(() => {
-    const lenis = new Lenis();
+ 
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
 
   return (
-    <main ref={container} className='main'>
-    
+    <main ref={container} className='main w-full'>
+    <motion.div  className='cardContainer overflow-hidden'>
+    <DataPlans/>
+    </motion.div>
+    <div className='cardContainer'/>
+<div style={{ zIndex: 999}}>
       {projects.map((project, i) => {
-        const targetScale = 1 - (projects.length - i) * 0.01;
+        const targetScale = 1 - (projects.length - i) * 0.03;
+        const left = i * 0.03
         return (
           <Card
             key={`p_${i}`}
             i={i}
+            left={left}
             {...project}
             progress={scrollYProgress}
             range={[i * 0.25, 1]}
@@ -206,7 +208,8 @@ const Plans = () => {
           />
         );
       })}
-      
+      </div>
+
       <Modal
         isOpen={isModalOpen}
         onClose={handleModalClose}
@@ -218,7 +221,7 @@ const Plans = () => {
 export default Plans;
 
 
-const Card = ({ i, GBData, src,allnetworksmins,sms ,price, color, progress, range, targetScale , onModalOpen}) => {
+const Card = ({ i, GBData, src, allnetworksmins, sms, price, color, progress, range, targetScale, onModalOpen, left }) => {
   const containerss = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerss,
@@ -229,50 +232,52 @@ const Card = ({ i, GBData, src,allnetworksmins,sms ,price, color, progress, rang
   const scale = useTransform(progress, range, [1, targetScale]);
   const isMobile = window.innerWidth < 700;
   return (
+     
+    <div  ref={containerss} className="cardContainer">
     
-    <div ref={containerss} className="cardContainer">
       <motion.div
         style={{
-          backgroundColor: color, scale,
+          backgroundColor: color,
+           scale, imageScale,
           top: `calc(${isMobile ? '-15vh' : '-5vh'} + ${i * 35}px)`,
-          left: `calc(${isMobile ? i * 20 : i * 40}px)`,
+          left: `calc(${isMobile ? i * 20 : i * 40}px)`,  
           // textShadow: `2px 2px ${color}`, WebkitTextStroke: '0.3px white'
           boxShadow: `0 0 21px 9px ${color}`
         }
         }
         className="card box-shadow-green ml-0 2xl:w-fit w-2/3 border border border-white py-10 px-20 rounded-md flex-col gap-4 items-center"
       >
-      <div className='hidden md:flex items-center flex-col gap-4 justify-center'>
-        <h1
-         className='bg-[#2b2c3e] rounded-lg text-white w-fit px-4 py-2 justify-center num-stroke text-lg'>Rs: {price}</h1>
-        <img className=' h-[12vh]' src={src} alt='' />
-        <div className='flex'>
-          <div className='px-5'>
-            <h1 className='text-6xl num-stroke text-white'>{GBData}</h1>
-            <h6 className='text-sm text-center'>GB Data      </h6>
+        <div className='hidden md:flex items-center flex-col gap-4 justify-center'>
+          <h1
+            className='bg-[#2b2c3e] rounded-lg text-white w-fit px-4 py-2 justify-center num-stroke text-lg'>Rs: {price}</h1>
+          <img className=' h-[12vh]' src={src} alt='' />
+          <div className='flex'>
+            <div className='px-5'>
+              <h1 className='text-6xl num-stroke text-white'>{GBData}</h1>
+              <h6 className='text-sm text-center'>GB Data      </h6>
+            </div>
+            <div className='w-[1px] h-12 py-4 my-1 bg-white' />
+            <div className='px-5'>
+              <h1 className='text-6xl num-stroke text-white'>{allnetworksmins}  </h1>
+              <h6 className='text-sm text-center' >All Ntwork Mins      </h6>
+            </div>
+            <div className='w-[1px] h-12 py-4 my-1 bg-white' />
+            <div className='px-5'>
+              <h1 className='text-6xl num-stroke text-white'>{sms} </h1>
+              <h6 className='text-sm text-center'>SMS </h6>
+            </div>
           </div>
-          <div className='w-[1px] h-12 py-4 my-1 bg-white' />
-          <div className='px-5'>
-            <h1 className='text-6xl num-stroke text-white'>{allnetworksmins}  </h1>
-            <h6 className='text-sm text-center' >All Ntwork Mins      </h6>
+          <div>
+            <div className="reveal-now bg-[#2b2c3e] flex items-center ">
+              <h6 style={{WebkitTextStrokeColor: color, WebkitTextStrokeWidth: '1.5px'}} className="uppercase text-white text-2xl ">Get Now</h6>
+              <img src={i === 0 ? GetNow : i === 1 ? GetNowGreen : i ===2 ? GetNowpurple : GetNowIndigo} alt="" />
+            </div>
+            <button onClick={() => onModalOpen(<TermsAndConditions color={color} />)} className='border font-bold border-white p-3 rounded-lg mt-5  items-center flex justify-center mx-auto'> Terms & Conditions
+            </button>
           </div>
-          <div className='w-[1px] h-12 py-4 my-1 bg-white' />
-          <div className='px-5'>
-            <h1 className='text-6xl num-stroke text-white'>{sms} </h1>
-            <h6 className='text-sm text-center'>SMS </h6>
-          </div>
-        </div>
-        <div>
-          <div className="reveal-now bg-[#2b2c3e] flex items-center ">
-            <h6 className="uppercase text-white text-2xl get-now">Get Now</h6>
-            <img src={GetNow} alt="" />
-          </div>
-          <button onClick={()=> onModalOpen(<TermsAndConditions/>)} className='border font-bold border-white p-3 rounded-lg mt-5  items-center flex justify-center mx-auto'> Terms & Conditions
-          </button>
-        </div>
         </div>
         <div className='block md:hidden'>
-        <PlansCard GBData={GBData} src={src} allnetworksmins ={allnetworksmins} sms={sms} price={price} color={color} onModalOpen={onModalOpen}/>
+          <PlansCard GBData={GBData} src={src} allnetworksmins={allnetworksmins} sms={sms} price={price} color={color} onModalOpen={onModalOpen} />
         </div>
       </motion.div>
 
